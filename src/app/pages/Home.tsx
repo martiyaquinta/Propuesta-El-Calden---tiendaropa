@@ -1,29 +1,12 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { Zap, Building2, ShoppingCart } from "lucide-react";
+import { Building2, ShoppingCart } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import Logo from "../components/Logo";
 
 export default function Home() {
   const proposals = [
-    {
-      id: 1,
-      title: "Landing Page",
-      subtitle: "Solución Rápida",
-      description: "Presencia digital impactante en una sola página. Perfecta para comenzar.",
-      icon: Zap,
-      path: "/landing-page",
-      price: "Desde $299",
-      features: [
-        "Diseño moderno y responsivo",
-        "Hero visual impactante",
-        "Integración WhatsApp",
-        "Sección de productos",
-        "Conexión Instagram",
-      ],
-      color: "from-violet-500 to-purple-600",
-    },
     {
       id: 2,
       title: "Web Profesional",
@@ -94,12 +77,12 @@ export default function Home() {
               Elige el nivel perfecto para tu negocio
             </h2>
             <p className="text-xl text-slate-600">
-              3 propuestas profesionales diseñadas para diferentes necesidades y presupuestos
+              2 propuestas profesionales diseñadas para diferentes necesidades y presupuestos
             </p>
           </motion.div>
 
           {/* Proposals Grid */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {proposals.map((proposal, index) => {
               const Icon = proposal.icon;
               return (
